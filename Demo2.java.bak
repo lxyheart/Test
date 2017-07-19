@@ -1,0 +1,50 @@
+/*需求：小孩想要一个电话手表，我的条件是语文成绩为98分以上，数学成绩
+也必须为98分以上，否则想都不想要。用程序来解决这个需求。
+*/
+import java.util.Scanner;
+class Demo2 {
+	public static void main(String[] args) {
+		Scanner n = new Scanner(System.in);
+		System.out.println("数学成绩:");
+		int mathScore = n.nextInt();
+		boolean flag = true;
+		boolean flag1 = true;
+		while(flag){
+			if(mathScore<0||mathScore>100){
+			System.out.println("成绩超出范围,重输");
+				mathScore = n.nextInt();
+				if(mathScore>=0&&mathScore<=100) {
+					break;
+					//System.out.println(flag+"1");
+				}
+			}else{
+				break;
+				//System.out.println(flag+"2");
+			}
+				
+			}
+		
+		System.out.println("语文成绩:");
+		int chinaScore = n.nextInt();
+		while(flag1){
+			if(chinaScore<0||chinaScore>100){
+			System.out.println("成绩超出范围,重输");
+			chinaScore = n.nextInt();
+			if(chinaScore>=0&&chinaScore<=100) {
+					break;
+					//System.out.println(flag1+"1");
+				}
+			}else{
+				break;
+				//System.out.println(flag1+"2");
+			}
+			
+			}
+		if(mathScore>98&chinaScore>98) {
+			System.out.println("得到手表一个");
+		} else {
+			System.out.println("没有手表");
+		}
+			
+	}
+}
